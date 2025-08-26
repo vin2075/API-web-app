@@ -1,7 +1,8 @@
 import axios from "axios";
 
+// Use live backend URL from environment variable
 const api = axios.create({
-  baseURL: "http://127.0.0.1:5000/api", // Flask backend base URL
+  baseURL: process.env.REACT_APP_API_URL, // dynamic base URL
 });
 
 // 🔹 Search API
@@ -18,7 +19,7 @@ export const searchData = async (query, provider) => {
   }
 };
 
-// 🔹 Example for weather (if implemented in backend)
+// 🔹 Example for weather
 export const getWeather = async (city) => {
   try {
     const response = await api.get(`/weather?city=${city}`);
@@ -29,7 +30,7 @@ export const getWeather = async (city) => {
   }
 };
 
-// 🔹 Example for news (if implemented in backend)
+// 🔹 Example for news
 export const getNews = async (topic) => {
   try {
     const response = await api.get(`/news?topic=${topic}`);
