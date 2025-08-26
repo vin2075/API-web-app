@@ -5,14 +5,16 @@ load_dotenv()
 
 class Config:
     SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret")
-    DB_USER = os.getenv("DATABASE_USER", "root")
-    DB_PASS = os.getenv("DATABASE_PASSWORD", "")
-    DB_HOST = os.getenv("DATABASE_HOST", "127.0.0.1")
-    DB_PORT = os.getenv("DATABASE_PORT", "3306")
-    DB_NAME = os.getenv("DATABASE_NAME", "apidb")
 
+    DB_USER = os.getenv("DB_USER")
+    DB_PASS = os.getenv("DB_PASSWORD")
+    DB_HOST = os.getenv("DB_HOST")
+    DB_PORT = os.getenv("DB_PORT", 5432)
+    DB_NAME = os.getenv("DB_NAME")
+
+    # PostgreSQL URI
     SQLALCHEMY_DATABASE_URI = (
-        f"mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+        f"postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
