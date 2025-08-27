@@ -137,5 +137,14 @@ def get_result(rid):
         return jsonify({"error": "not_found"}), 404
     return jsonify(rec.to_dict()), 200
 
+@app.route("/", methods=["GET"])
+def index():
+    return jsonify({
+        "message": "Welcome to API Driven Mini Web App Backend",
+        "status": "running",
+        "endpoints": ["/api/health", "/api/search", "/api/results"]
+    }), 200
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), debug=True)
