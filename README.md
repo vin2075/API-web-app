@@ -16,7 +16,7 @@ A full-stack web application to search external APIs (GitHub & OpenWeather), sto
 - Display results in a clean, responsive dashboard.
 - Supports pagination for stored results.
 - RESTful API endpoints for frontend consumption.
-- Handles API errors gracefully and logs them for debugging.
+- Handles API errors gracefully and logs them for debugging things.
 
 ---
 
