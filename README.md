@@ -20,7 +20,7 @@ A full-stack web application to search external APIs (GitHub & OpenWeather), sto
 
 ---
 
-## Tech Stack
+## TechStack
 
 - **Frontend:** React, Axios, HTML/CSS  
 - **Backend:** Python, Flask, Flask-Migrate, SQLAlchemy  
