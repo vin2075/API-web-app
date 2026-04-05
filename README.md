@@ -2,7 +2,7 @@
 
 A full-stack web application to search external APIs (GitHub & OpenWeather), store results, and display them on a dashboard with timestamps in both UTC and IST. Built with **React** (frontend) and **Flask** (backend), deployed on **Vercel** (frontend) and **Render** (backend).
 
-## Live Demo
+## Live demo
 
 - Frontend: [https://api-web-app-sandy.vercel.app/](https://api-web-app-sandy.vercel.app/)  
 - Backend: *(Render deployment)*
