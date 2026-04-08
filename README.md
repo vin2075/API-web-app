@@ -9,7 +9,7 @@ A full-stack web application to search external APIs (GitHub & OpenWeather), sto
 
 ---
 
-## Feature
+## Features
 
 - Search GitHub repositories or OpenWeather cities directly from the dashboard.
 - Store search results in PostgreSQL with timestamps (UTC + IST).
